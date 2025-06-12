@@ -1,0 +1,12 @@
+---
+import Layout from "~/layouts/Layout.astro";
+
+const loggedInUser = Astro.locals.user;
+---
+
+<Layout>
+  <h1>Dashboard</h1>
+
+  <p>Welcome, {loggedInUser ? loggedInUser.name : "Guest"}!</p>
+  <p>Your email: {loggedInUser ? loggedInUser.email : "--"}</p>
+</Layout>

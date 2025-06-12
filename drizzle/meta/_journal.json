@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1749747287720,
+      "tag": "0000_complete_korg",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1749747729316,
+      "tag": "0001_easy_mantis",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1749748077358,
+      "tag": "0002_brainy_eternity",
+      "breakpoints": true
+    }
+  ]
+}
