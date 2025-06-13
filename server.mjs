@@ -3,6 +3,9 @@ import fastifyMiddie from "@fastify/middie";
 import fastifyStatic from "@fastify/static";
 import { fileURLToPath } from "node:url";
 import { handler as ssrHandler } from "./dist/server/entry.mjs";
+import { config } from "dotenv";
+import { expand } from "dotenv-expand";
+expand(config());
 
 async function main() {
   const app = Fastify({ logger: true });
@@ -15,7 +18,7 @@ async function main() {
 
   app.use(ssrHandler);
 
-  app.listen({ port: Number(process.env.PORT || 4000) });
+  app.listen({ port: Number(process.env.PORT || 3000) });
 }
 
 main().catch(console.error);
