@@ -15,7 +15,7 @@ async function main() {
 
   app.use(ssrHandler);
 
-  app.listen({ port: 8080 });
+  app.listen({ port: Number(process.env.PORT || 4000) });
 }
 
 main().catch(console.error);

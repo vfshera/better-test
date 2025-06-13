@@ -7,7 +7,6 @@ import vercel from "@astrojs/vercel";
 import cloudflare from "@astrojs/cloudflare";
 
 function getAdapter() {
-  console.log("process.env ==> ", process.env);
   /**
    * https://developers.cloudflare.com/workers/wrangler/system-environment-variables/#supported-environment-variables
    */
