@@ -1,14 +1,19 @@
 // @ts-check
 import { defineConfig, envField } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
-
 import netlify from "@astrojs/netlify";
-
 import node from "@astrojs/node";
-
 import vercel from "@astrojs/vercel";
+import cloudflare from "@astrojs/cloudflare";
 
 function getAdapter() {
+  console.log("process.env ==> ", process.env);
+
+  if (process.env.CLOUDFLARE_ACCOUNT_ID) {
+    console.log("Building for Cloudflare");
+    return cloudflare();
+  }
+
   /**
    * https://vercel.com/docs/environment-variables/system-environment-variables#VERCEL
    */
